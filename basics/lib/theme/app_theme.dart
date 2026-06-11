@@ -2,29 +2,29 @@ import 'package:flutter/material.dart';
 
 class AppTheme {
   // ─── Palette ──────────────────────────────────────────────────────
-  static const Color primary = Color(0xFFFFFFFF);
-  static const Color primaryDark = Color(0xFFE0E0E0);
-  static const Color accent = Color(0xFFFFFFFF);
-  static const Color success = Color(0xFFFFFFFF);
-  static const Color warning = Color(0xFFBDBDBD);
+  static const Color primary = Color(0xFF000000);
+  static const Color primaryDark = Color(0xFF212121);
+  static const Color accent = Color(0xFF000000);
+  static const Color success = Color(0xFF2E7D32);
+  static const Color warning = Color(0xFFE65100);
 
-  static const Color bgDark = Color(0xFF000000);
-  static const Color bgCard = Color(0xFF111111);
-  static const Color bgSurface = Color(0xFF1A1A1A);
+  static const Color bgDark = Color(0xFFFFFFFF);
+  static const Color bgCard = Color(0xFFF5F5F5);
+  static const Color bgSurface = Color(0xFFEEEEEE);
 
-  static const Color textPrimary = Color(0xFFFFFFFF);
-  static const Color textSecondary = Color(0xFFE0E0E0);
-  static const Color textMuted = Color(0xFF9E9E9E);
+  static const Color textPrimary = Color(0xFF000000);
+  static const Color textSecondary = Color(0xFF212121);
+  static const Color textMuted = Color(0xFF757575);
 
   // ─── Gradients ────────────────────────────────────────────────────
   static const LinearGradient primaryGradient = LinearGradient(
-    colors: [Color(0xFF000000), Color(0xFF2C2C2C)],
+    colors: [Color(0xFFFFFFFF), Color(0xFFEEEEEE)],
     begin: Alignment.topLeft,
     end: Alignment.bottomRight,
   );
 
   static const LinearGradient accentGradient = LinearGradient(
-    colors: [Color(0xFFFFFFFF), Color(0xFFBDBDBD)],
+    colors: [Color(0xFF000000), Color(0xFF424242)],
     begin: Alignment.topLeft,
     end: Alignment.bottomRight,
   );
@@ -36,16 +36,16 @@ class AppTheme {
   );
 
   // ─── Theme ────────────────────────────────────────────────────────
-  static ThemeData get darkTheme {
+  static ThemeData get lightTheme {
     return ThemeData(
       useMaterial3: true,
-      brightness: Brightness.dark,
+      brightness: Brightness.light,
       scaffoldBackgroundColor: bgDark,
-      colorScheme: const ColorScheme.dark(
+      colorScheme: const ColorScheme.light(
         primary: primary,
         secondary: accent,
         surface: bgCard,
-        onPrimary: Colors.black,
+        onPrimary: Colors.white,
         onSurface: textPrimary,
       ),
       fontFamily: 'sans-serif',
@@ -73,7 +73,7 @@ class AppTheme {
         elevation: 0,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16),
-          side: BorderSide(color: Color(0xFF2C2C2C), width: 1),
+          side: BorderSide(color: Color(0xFFE0E0E0), width: 1),
         ),
       ),
       inputDecorationTheme: InputDecorationTheme(
@@ -85,7 +85,7 @@ class AppTheme {
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(14),
-          borderSide: BorderSide(color: Color(0xFFFFFFFF), width: 1),
+          borderSide: BorderSide(color: Color(0xFF000000), width: 1.5),
         ),
         hintStyle: const TextStyle(color: textMuted),
         contentPadding:
@@ -94,7 +94,7 @@ class AppTheme {
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
           backgroundColor: primary,
-          foregroundColor: Colors.black,
+          foregroundColor: Colors.white,
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
           padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
