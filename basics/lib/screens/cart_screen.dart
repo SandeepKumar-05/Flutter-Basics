@@ -36,21 +36,21 @@ class CartScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildCart(BuildContext context, AppState state) {
-    return Column(
-      children: [
-        Expanded(
-          child: ListView.builder(
-            padding: const EdgeInsets.fromLTRB(20, 12, 20, 12),
-            itemCount: state.cart.length,
-            itemBuilder: (context, i) =>
-                _CartTile(item: state.cart[i], state: state),
-          ),
-        ),
-        _buildSummary(context, state),
-      ],
-    );
-  }
+  // Widget _buildCart(BuildContext context, AppState state) {
+  //   return Column(
+  //     children: [
+  //       Expanded(
+  //         child: ListView.builder(
+  //           padding: const EdgeInsets.fromLTRB(20, 12, 20, 12),
+  //           itemCount: state.cart.length,
+  //           itemBuilder: (context, i) =>
+  //               _CartTile(item: state.cart[i], state: state),
+  //         ),
+  //       ),
+  //       _buildSummary(context, state),
+  //     ],
+  //   );
+  // }
 
   Widget _buildSummary(BuildContext context, AppState state) {
     final subtotal = state.cartTotal;
