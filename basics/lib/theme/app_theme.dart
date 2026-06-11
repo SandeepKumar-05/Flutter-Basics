@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 class AppTheme {
   // ─── Palette ──────────────────────────────────────────────────────
-  static const Color primary = Color(0xFF6C63FF);
-  static const Color primaryDark = Color(0xFF3D35CC);
+  static const Color primary = Color.fromARGB(255, 255, 255, 255);
+  static const Color primaryDark = Color.fromARGB(255, 255, 255, 255);
   static const Color accent = Color(0xFFFF6584);
   static const Color success = Color(0xFF00C896);
   static const Color warning = Color(0xFFFFB800);
@@ -12,9 +12,9 @@ class AppTheme {
   static const Color bgCard = Color(0xFF1A1A2E);
   static const Color bgSurface = Color(0xFF16213E);
 
-  static const Color textPrimary = Color(0xFFE8E8FF);
-  static const Color textSecondary = Color(0xFF9090BB);
-  static const Color textMuted = Color(0xFF555577);
+  static const Color textPrimary = Color.fromARGB(255, 17, 17, 17);
+  static const Color textSecondary = Color.fromARGB(255, 28, 28, 29);
+  static const Color textMuted = Color.fromARGB(255, 0, 0, 0);
 
   // ─── Gradients ────────────────────────────────────────────────────
   static const LinearGradient primaryGradient = LinearGradient(
