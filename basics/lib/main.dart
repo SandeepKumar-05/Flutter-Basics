@@ -5,7 +5,6 @@ import 'package:provider/provider.dart';
 import 'state/app_state.dart';
 import 'theme/app_theme.dart';
 import 'screens/home_screen.dart';
-import 'screens/cart_screen.dart';
 import 'screens/wishlist_screen.dart';
 import 'screens/profile_screen.dart';
 
@@ -64,7 +63,6 @@ class _MainShellState extends State<MainShell> {
     final screens = [
       const HomeScreen(),
       const WishlistScreen(),
-      const CartScreen(),
       const ProfileScreen(),
     ];
 
