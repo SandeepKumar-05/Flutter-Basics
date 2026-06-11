@@ -2,29 +2,29 @@ import 'package:flutter/material.dart';
 
 class AppTheme {
   // ─── Palette ──────────────────────────────────────────────────────
-  static const Color primary = Color.fromARGB(255, 255, 255, 255);
-  static const Color primaryDark = Color.fromARGB(255, 255, 255, 255);
-  static const Color accent = Color(0xFFFF6584);
-  static const Color success = Color(0xFF00C896);
-  static const Color warning = Color(0xFFFFB800);
+  static const Color primary = Color(0xFFFFFFFF);
+  static const Color primaryDark = Color(0xFFE0E0E0);
+  static const Color accent = Color(0xFFFFFFFF);
+  static const Color success = Color(0xFFFFFFFF);
+  static const Color warning = Color(0xFFBDBDBD);
 
-  static const Color bgDark = Color(0xFF0F0F1A);
-  static const Color bgCard = Color(0xFF1A1A2E);
-  static const Color bgSurface = Color(0xFF16213E);
+  static const Color bgDark = Color(0xFF000000);
+  static const Color bgCard = Color(0xFF111111);
+  static const Color bgSurface = Color(0xFF1A1A1A);
 
-  static const Color textPrimary = Color.fromARGB(255, 17, 17, 17);
-  static const Color textSecondary = Color.fromARGB(255, 28, 28, 29);
-  static const Color textMuted = Color.fromARGB(255, 0, 0, 0);
+  static const Color textPrimary = Color(0xFFFFFFFF);
+  static const Color textSecondary = Color(0xFFE0E0E0);
+  static const Color textMuted = Color(0xFF9E9E9E);
 
   // ─── Gradients ────────────────────────────────────────────────────
   static const LinearGradient primaryGradient = LinearGradient(
-    colors: [primary, Color(0xFF9C27B0)],
+    colors: [Color(0xFF000000), Color(0xFF2C2C2C)],
     begin: Alignment.topLeft,
     end: Alignment.bottomRight,
   );
 
   static const LinearGradient accentGradient = LinearGradient(
-    colors: [accent, Color(0xFFFF8C42)],
+    colors: [Color(0xFFFFFFFF), Color(0xFFBDBDBD)],
     begin: Alignment.topLeft,
     end: Alignment.bottomRight,
   );
@@ -45,7 +45,7 @@ class AppTheme {
         primary: primary,
         secondary: accent,
         surface: bgCard,
-        onPrimary: Colors.white,
+        onPrimary: Colors.black,
         onSurface: textPrimary,
       ),
       fontFamily: 'sans-serif',
@@ -71,7 +71,10 @@ class AppTheme {
       cardTheme: CardThemeData(
         color: bgCard,
         elevation: 0,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(16),
+          side: BorderSide(color: Color(0xFF2C2C2C), width: 1),
+        ),
       ),
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
@@ -80,6 +83,10 @@ class AppTheme {
           borderRadius: BorderRadius.circular(14),
           borderSide: BorderSide.none,
         ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(14),
+          borderSide: BorderSide(color: Color(0xFFFFFFFF), width: 1),
+        ),
         hintStyle: const TextStyle(color: textMuted),
         contentPadding:
             const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
@@ -87,7 +94,7 @@ class AppTheme {
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
           backgroundColor: primary,
-          foregroundColor: Colors.white,
+          foregroundColor: Colors.black,
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
           padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
