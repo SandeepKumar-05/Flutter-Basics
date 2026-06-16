@@ -12,10 +12,10 @@ import 'screens/profile_screen.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setSystemUIOverlayStyle(
-    const SystemUiOverlayStyle(
-      statusBarColor: Color.fromARGB(0, 169, 107, 107),
-      statusBarIconBrightness: Brightness.light,
-    ),
+      const SystemUiOverlayStyle(
+        statusBarColor: Colors.transparent,
+        statusBarIconBrightness: Brightness.dark,
+      ),
   );
   runApp(
     ChangeNotifierProvider(
@@ -33,7 +33,7 @@ class ShopApp extends StatelessWidget {
     return MaterialApp(
       title: 'ShopWave',
       debugShowCheckedModeBanner: false,
-      theme: AppTheme.darkTheme,
+      theme: AppTheme.lightTheme,
       home: const MainShell(),
     );
   }
