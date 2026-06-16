@@ -8,12 +8,12 @@ class AppTheme {
   static const Color success = Color(0xFF10B981);       // Emerald green
   static const Color warning = Color(0xFFF59E0B);       // Amber
 
-  static const Color bgDark = Color(0xFF0F0F1A);        // Near-black indigo
-  static const Color bgCard = Color(0xFF1A1A2E);        // Dark card surface
-  static const Color bgSurface = Color(0xFF16213E);     // Slightly lighter surface
+  static const Color bgDark = Color(0xFFF8FAFC);        // Near-white background
+  static const Color bgCard = Color(0xFFFFFFFF);        // White card surface
+  static const Color bgSurface = Color(0xFFF1F5F9);     // Slightly darker surface
 
-  static const Color textPrimary = Color(0xFFF1F5F9);   // Off-white
-  static const Color textSecondary = Color(0xFFCBD5E1); // Cool grey
+  static const Color textPrimary = Color(0xFF0F172A);   // Dark text
+  static const Color textSecondary = Color(0xFF334155); // Cool grey
   static const Color textMuted = Color(0xFF64748B);     // Slate muted
 
   // ─── Gradients ────────────────────────────────────────────────────
@@ -36,12 +36,12 @@ class AppTheme {
   );
 
   // ─── Theme ────────────────────────────────────────────────────────
-  static ThemeData get darkTheme {
+  static ThemeData get lightTheme {
     return ThemeData(
       useMaterial3: true,
-      brightness: Brightness.dark,
+      brightness: Brightness.light,
       scaffoldBackgroundColor: bgDark,
-      colorScheme: const ColorScheme.dark(
+      colorScheme: const ColorScheme.light(
         primary: primary,
         secondary: accent,
         surface: bgCard,
@@ -73,7 +73,7 @@ class AppTheme {
         elevation: 0,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16),
-          side: const BorderSide(color: Color(0xFF2D2D4E), width: 1),
+          side: const BorderSide(color: Color(0xFFE2E8F0), width: 1),
         ),
       ),
       inputDecorationTheme: InputDecorationTheme(
