@@ -10,7 +10,7 @@ class AppPallete {
   // Light Theme Colors
   static const Color lightBackground = Colors.white;
   static const Color lightSurface = Color(0xFFF5F5F5); // Slightly gray for surfaces
-  static const Color lightPrimaryText = Colors.black;
+
 
 
   // Shared Colors
