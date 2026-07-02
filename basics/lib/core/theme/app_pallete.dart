@@ -11,7 +11,7 @@ class AppPallete {
   static const Color lightBackground = Colors.white;
   static const Color lightSurface = Color(0xFFF5F5F5); // Slightly gray for surfaces
   static const Color lightPrimaryText = Colors.black;
-  static const Color lightSecondaryText = Colors.black87;
+
 
   // Shared Colors
   static const Color error = Colors.redAccent;
