@@ -10,10 +10,18 @@ class AppPallete {
   // Light Theme Colors
   static const Color lightBackground = Colors.white;
   static const Color lightSurface = Color(0xFFF5F5F5); // Slightly gray for surfaces
-
-
+  static const Color lightPrimaryText = Colors.black;
+  static const Color lightSecondaryText = Colors.black87;
 
   // Shared Colors
   static const Color error = Colors.redAccent;
   static const Color transparent = Colors.transparent;
+  
+  static const Color gradient1 = Color(0xFFE94057);
+  static const Color gradient2 = Color(0xFFF27121);
+  static const Color gradient3 = Color(0xFF8A2387);
+  
+  static const Color borderColor = Color.fromRGBO(52, 51, 67, 1);
+  static const Color whiteColor = Colors.white;
+  static const Color greyColor = Colors.grey;
 }

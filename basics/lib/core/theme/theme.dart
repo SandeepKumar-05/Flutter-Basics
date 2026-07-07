@@ -2,6 +2,14 @@ import 'package:flutter/material.dart';
 import 'app_pallete.dart';
 
 class AppTheme {
+  static _border([Color color = AppPallete.borderColor]) => OutlineInputBorder(
+    borderSide: BorderSide(
+      color: color,
+      width: 3,
+    ),
+    borderRadius: BorderRadius.circular(10),
+  );
+
   static final darkThemeMode = ThemeData.dark().copyWith(
     scaffoldBackgroundColor: AppPallete.darkBackground,
     colorScheme: const ColorScheme.dark(
@@ -20,6 +28,13 @@ class AppTheme {
         foregroundColor: AppPallete.darkBackground,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
       ),
+    ),
+    inputDecorationTheme: InputDecorationTheme(
+      contentPadding: const EdgeInsets.all(27),
+      border: _border(),
+      enabledBorder: _border(),
+      focusedBorder: _border(AppPallete.gradient2),
+      errorBorder: _border(AppPallete.error),
     ),
   );
 
@@ -41,6 +56,13 @@ class AppTheme {
         foregroundColor: AppPallete.lightBackground,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
       ),
+    ),
+    inputDecorationTheme: InputDecorationTheme(
+      contentPadding: const EdgeInsets.all(27),
+      border: _border(Colors.grey.shade400),
+      enabledBorder: _border(Colors.grey.shade400),
+      focusedBorder: _border(AppPallete.gradient2),
+      errorBorder: _border(AppPallete.error),
     ),
   );
 }
